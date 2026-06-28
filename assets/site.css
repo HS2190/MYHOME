@@ -185,10 +185,10 @@ h1.ready .li{transform:none}
 .pillar p{color:var(--gray); font-size:.92rem; margin-top:16px; line-height:1.6}
 
 /* ===== CONTACT ===== */
-.contact{padding:clamp(80px,11vw,160px) 0 clamp(64px,8vw,120px); border-top:1px solid var(--line)}
-.contact .ctop{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+section.contact{padding:clamp(80px,11vw,160px) 0 clamp(64px,8vw,120px); border-top:1px solid var(--line)}
+section.contact .ctop{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
   margin-bottom:clamp(36px,5vw,64px); font-family:var(--mono); font-size:12px; letter-spacing:.8px}
-.contact .ctop .l{color:var(--mute)} .contact .ctop .r{color:var(--yel)}
+section.contact .ctop .l{color:var(--mute)} section.contact .ctop .r{color:var(--yel)}
 h2.big{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(3rem,11vw,8rem);
   line-height:.94; letter-spacing:-.03em}
 h2.big .yel{color:var(--yel)}
