@@ -76,3 +76,40 @@ document.querySelectorAll('.ba').forEach(function(ba){
   ba.addEventListener('pointerup',function(){on=false;});
   ba.addEventListener('pointercancel',function(){on=false;});
 });
+
+// ===== AI workflow · run simulation =====
+(function(){
+  var stage=document.getElementById('ai-stage'); if(!stage) return;
+  var runBtn=document.getElementById('ai-run');
+  var fill=stage.querySelector('.ai-fill');
+  var arrows=Array.prototype.slice.call(stage.querySelectorAll('.ai-arrow'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers=[];
+  function node(sel){ return stage.querySelector('.ai-node.'+sel); }
+  function agent(i){ return stage.querySelectorAll('.ai-agents .ai-node')[i]; }
+  function reset(){
+    stage.querySelectorAll('.ai-node').forEach(function(n){n.classList.remove('lit');});
+    arrows.forEach(function(a){a.classList.remove('lit');}); fill.style.width='0';
+  }
+  function finalState(){
+    stage.querySelectorAll('.ai-node').forEach(function(n){n.classList.add('lit');});
+    arrows.forEach(function(a){a.classList.add('lit');}); fill.style.width='100%';
+  }
+  function run(){
+    timers.forEach(clearTimeout); timers=[];
+    if(reduce){ finalState(); return; }
+    reset(); if(runBtn) runBtn.classList.add('running');
+    var seq=[
+      [120, function(){ node('input').classList.add('lit'); fill.style.width='14%'; }],
+      [680, function(){ arrows[0].classList.add('lit'); node('orc').classList.add('lit'); fill.style.width='40%'; }],
+      [1320,function(){ arrows[1].classList.add('lit'); agent(0).classList.add('lit'); fill.style.width='58%'; }],
+      [1580,function(){ agent(1).classList.add('lit'); fill.style.width='70%'; }],
+      [1840,function(){ agent(2).classList.add('lit'); fill.style.width='82%'; }],
+      [2480,function(){ arrows[2].classList.add('lit'); node('human').classList.add('lit'); fill.style.width='100%'; if(runBtn) runBtn.classList.remove('running'); }]
+    ];
+    seq.forEach(function(s){ timers.push(setTimeout(s[1], s[0])); });
+  }
+  if(runBtn) runBtn.addEventListener('click', run);
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(); io.unobserve(e.target); } }); }, {threshold:.4});
+  io.observe(stage);
+})();

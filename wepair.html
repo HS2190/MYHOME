@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="assets/site.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=3">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -236,9 +236,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <p class="ls-hint reveal">→ 같은 컴포넌트, <b>토큰만 교체</b>. PDF는 이걸 캡처할 수 있을 뿐, 만져볼 수는 없다.</p>
 
-    <div class="figs" style="margin-top:46px">
-      <figure class="reveal"><div class="fig"><img src="assets/pages/wepair-ai.png" alt="Role-based AI Workflow" loading="lazy"></div>
-        <figcaption class="figcap"><b>AI WORKFLOW</b> 오케스트레이터 + PM·PO·UX라이터 AI 에이전트 — 빈 역할을 워크플로우로 보완, 검수·확정은 사람</figcaption></figure>
+  </div>
+</section>
+
+<!-- ===== AI WORKFLOW (interactive console) ===== -->
+<section class="sec" id="aiflow">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>04</b> / AI 워크플로우</span><span class="sec-meta"><span>ROLE-BASED · ORCHESTRATION</span></span></div>
+    <div class="sec-rule draw"></div>
+    <h2 class="title reveal">없던 역할을,<br><mark>워크플로우로.</mark></h2>
+    <p class="feat-desc reveal" style="max-width:58ch">PM·PO·UX라이터가 없는 자리. 부족한 역할을 Claude Code 기반 워크플로우로 구조화하고, 검수·확정은 사람이 소유했다. PRD·UX 라이팅 기준을 0→1로.</p>
+
+    <div class="aiflow reveal">
+      <div class="ai-bar">
+        <span class="ai-bar-l">ORCHESTRATOR CONSOLE</span>
+        <button class="ai-run" id="ai-run">▶ 워크플로우 실행</button>
+      </div>
+      <div class="ai-stage" id="ai-stage">
+        <div class="ai-track"><span class="ai-fill"></span></div>
+        <div class="ai-pipe">
+          <div class="ai-node input"><div class="ai-k">INPUT</div><div class="ai-t">영업 VOC</div></div>
+          <div class="ai-arrow">→</div>
+          <div class="ai-node orc"><div class="ai-k">ORCHESTRATOR</div><div class="ai-t">역할 분배·조율</div></div>
+          <div class="ai-arrow">→</div>
+          <div class="ai-agents">
+            <div class="ai-node"><div class="ai-k">AI · PM</div><div class="ai-t">VOC 분석 · 우선순위</div><div class="ai-out">→ 우선순위 목록</div></div>
+            <div class="ai-node"><div class="ai-k">AI · PO</div><div class="ai-t">기능 정의 · 플로우</div><div class="ai-out">→ PRD</div></div>
+            <div class="ai-node"><div class="ai-k">AI · UX 라이터</div><div class="ai-t">UI 문구 · 에러 메시지</div><div class="ai-out">→ 문구 셋</div></div>
+          </div>
+          <div class="ai-arrow">→</div>
+          <div class="ai-node human"><div class="ai-k">HUMAN · 본인</div><div class="ai-t">검수 · 최종 확정</div><div class="ai-stamp">✓</div></div>
+        </div>
+      </div>
+      <div class="ai-foot">
+        <span class="ai-note">디자인은 사람이 메인 · AI는 보조 · 모든 산출물은 디자이너 검수로 확정</span>
+        <a class="ai-gh" href="https://github.com/HS2190/product-ai-crew-docs" target="_blank" rel="noopener">GitHub · 에이전트 instruction ↗</a>
+      </div>
+    </div>
+
+    <div class="insight reveal" style="margin-top:30px">
+      <span class="il">→ KEY INSIGHT</span>
+      <p>처음엔 UX 라이팅 봇만 만들려 했다. 만들다 보니 문제는 문구가 아니라 <mark>비어 있는 역할</mark>이었다.</p>
     </div>
   </div>
 </section>
@@ -246,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- RETROSPECT -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>04</b> / 회고</span><span class="sec-meta"><span>RETROSPECT</span></span></div>
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>05</b> / 회고</span><span class="sec-meta"><span>RETROSPECT</span></span></div>
     <div class="sec-rule draw"></div>
     <div class="retro">
       <div class="r reveal"><div class="rk">LIMITATION</div><div class="rt">AI는 현장 맥락을 모른다</div><div class="rp">현장 작업 습관이나 말로 안 하는 불편은 인터뷰로만 나왔다. 이 영역은 AI가 대신하지 못했다.</div></div>
@@ -267,6 +305,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span>PROJECT 01 · 위페어 파트너스</span>
 </div></footer>
 
-<script src="assets/site.js?v=2"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>
