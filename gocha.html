@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="assets/site.css?v=5">
+<link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body class="light t-gocha">
 <!-- Google Tag Manager (noscript) -->
@@ -104,8 +104,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="feat-eyebrow reveal"><span class="sq"></span>DECISION 02 · 정보구조</div>
     <h2 class="feat-title reveal" style="margin-top:8px">흩어진 걸, <span class="yel">제자리로.</span></h2>
     <p class="feat-desc reveal" style="max-width:48ch">“차계부가 어디 있는지 모르겠다”는 기능 부족이 아니라 구조 문제였다. 더보기 <b class="yel" style="font-weight:600">15 → 8</b>로 줄이고 재배치.</p>
-    <div class="figs" style="margin-top:clamp(34px,4vw,52px)">
-      <figure class="reveal"><div class="fig"><img src="assets/pages/gocha-ia.png" alt="정보구조 재정립 — 더보기 15→8" loading="lazy"></div></figure>
+    <div class="gia reveal">
+      <div class="gia-col">
+        <div class="gia-ch"><span class="t">AS-IS · 더보기</span><span class="n">15</span></div>
+        <div class="gia-chips">
+          <span class="gia-chip">내 정보</span><span class="gia-chip mv">차계부(중복)</span><span class="gia-chip">점검리포트</span>
+          <span class="gia-chip">결제내역</span><span class="gia-chip">포인트</span><span class="gia-chip">쿠폰함</span>
+          <span class="gia-chip">파트너사</span><span class="gia-chip">결제수단 관리</span><span class="gia-chip mv">초대 EVENT</span>
+          <span class="gia-chip mv">이벤트(매물)</span><span class="gia-chip">알림</span><span class="gia-chip">공지사항</span>
+          <span class="gia-chip">고객센터</span><span class="gia-chip">환경설정</span><span class="gia-chip">회원탈퇴</span>
+        </div>
+      </div>
+      <div class="gia-arr">→</div>
+      <div class="gia-col to">
+        <div class="gia-ch"><span class="t">TO-BE · 더보기</span><span class="n"><b>8</b></span></div>
+        <div class="gia-chips">
+          <span class="gia-chip">내 정보</span><span class="gia-chip nw">포인트·쿠폰</span><span class="gia-chip nw">결제내역·수단</span>
+          <span class="gia-chip nw">이벤트 허브</span><span class="gia-chip">알림</span><span class="gia-chip">공지사항</span>
+          <span class="gia-chip">고객센터</span><span class="gia-chip nw">설정·탈퇴</span>
+        </div>
+      </div>
+    </div>
+    <div class="evid" style="margin-top:clamp(18px,2.4vw,28px)">
+      <div class="ec reveal"><div class="ek">MOVE · 이동·재배치</div><div class="et" style="margin-top:10px;font-size:1.06rem">차계부를 못 찾음</div><p class="ep">차량관리·더보기에 중복되던 진입로를 차량관리로 일원화.</p></div>
+      <div class="ec reveal"><div class="ek">NEW · 신설</div><div class="et" style="margin-top:10px;font-size:1.06rem">예약 내역이 없음</div><p class="ep">예약을 정식 탭으로 신설 — 다가오는·지난 예약을 한곳에서.</p></div>
+      <div class="ec reveal"><div class="ek">NEW · 신설</div><div class="et" style="margin-top:10px;font-size:1.06rem">이벤트를 못 봄</div><p class="ep">홈 상설 배너 + 이벤트 허브로 흩어진 이벤트·초대를 통합.</p></div>
     </div>
   </div>
 </section>
@@ -115,10 +138,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="feat-eyebrow reveal"><span class="sq"></span>DECISION 03 · 신뢰는 일관성에서</div>
     <h2 class="feat-title reveal" style="margin-top:8px">변형을, <span class="yel">제한했다.</span></h2>
-    <p class="feat-desc reveal" style="max-width:48ch">더 많은 컴포넌트가 아니라 <b class="yel" style="font-weight:600">더 적은 변형</b>이 답이었다. 버튼 3종·배지 4종, iOS·Android 통일.</p>
-    <div class="figs" style="margin-top:clamp(34px,4vw,52px)">
-      <figure class="reveal"><div class="fig"><img src="assets/pages/gocha-system.png" alt="디자인 시스템 — 저렴함에서 신뢰감으로" loading="lazy"></div></figure>
+    <p class="feat-desc reveal" style="max-width:48ch">더 많은 컴포넌트가 아니라 <b class="yel" style="font-weight:600">더 적은 변형</b>이 답이었다. 버튼 3종·배지로 변형을 제한하고 iOS·Android를 통일.</p>
+    <div class="livesys reveal" data-theme="light">
+      <div class="ls-canvas">
+        <div class="ls-group"><div class="ls-gl">01 · FOUNDATION — BRAND</div>
+          <div class="ls-row">
+            <span class="ls-token"><i style="background:#3b6ef6"></i>primary · blue/600</span>
+            <span class="ls-token"><i style="background:#2456d8"></i>primary · strong</span>
+            <span class="ls-token"><i style="background:#eaf0fe"></i>primary · soft</span>
+            <span class="ls-token"><i style="background:#f5f8ff"></i>primary · bg</span>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">02 · BUTTON · 3</div>
+          <div class="ls-row">
+            <button class="dsb primary">한번에 예약</button>
+            <button class="dsb secondary">자세히 보기</button>
+            <button class="dsb ghost">예약하기</button>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">03 · STATUS BADGE</div>
+          <div class="ls-row">
+            <span class="dsbadge danger"><span class="dot"></span>교체 필요</span>
+            <span class="dsbadge warn"><span class="dot"></span>점검 권장</span>
+            <span class="dsbadge ok"><span class="dot"></span>정상</span>
+            <span class="dsbadge danger"><span class="dot"></span>마감임박</span>
+            <span class="dsbadge brand"><span class="dot"></span>이벤트</span>
+            <span class="dsbadge dark"><span class="dot"></span>D-3</span>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">04 · CARD · TYPOGRAPHY</div>
+          <div class="ls-row">
+            <div class="dscard">
+              <div class="plate">123가 4998</div>
+              <div class="model">IONIQ 6 · 124,000 km</div>
+              <div class="crow"><span class="dsbadge warn"><span class="dot"></span>점검 권장</span><span class="dsbadge dark"><span class="dot"></span>D-3</span></div>
+            </div>
+            <div class="dstype">
+              <div class="ty-d">My Garage</div><div class="ty-k">DISPLAY · 40 / 44 Bold</div>
+              <div class="ty-b">누적 주행거리 124,000 km — 정비 후 120일 경과</div><div class="ty-bk">BODY · 14 / 20 Regular</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <p class="ls-hint reveal">→ 같은 토큰, 같은 컴포넌트. 내부 테스트의 ‘부실해 보인다’ 반응이 사라졌다 — <b>신뢰는 일관성에서</b>.</p>
   </div>
 </section>
 
@@ -128,8 +191,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="feat-eyebrow reveal"><span class="sq"></span>OUTCOME · 디자인을 성과로</div>
     <h2 class="feat-title reveal" style="margin-top:8px">숫자로, <span class="yel">증명했다.</span></h2>
     <p class="feat-desc reveal" style="max-width:50ch">서비스부터 광고까지 같은 톤으로. 이벤트를 템플릿으로 시스템화해 빠르게 실험했다 — 8개월 <b class="yel" style="font-weight:600">4,027건 · CPI −63%</b>.</p>
-    <div class="figs" style="margin-top:clamp(34px,4vw,52px)">
-      <figure class="reveal"><div class="fig"><img src="assets/pages/gocha-results.png" alt="마케팅 성과 — 4,027건, CPI −63%" loading="lazy"></div></figure>
+    <div class="gchart reveal">
+      <div class="gc-head">
+        <span class="gc-title">APP INSTALL × CPI · 월별 추이</span>
+        <span class="gc-leg"><span><i class="b"></i>설치(건)</span><span><i class="l"></i>CPI(원)</span></span>
+      </div>
+      <div class="gc-plot">
+        <svg class="gc-line" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polyline points="6.25,15 18.75,10 31.25,5 43.75,30 56.25,45 68.75,55 81.25,60 93.75,65"/>
+          <circle cx="31.25" cy="5" r="1.5"/><circle cx="93.75" cy="65" r="1.5"/>
+        </svg>
+        <div class="gc-bars">
+          <div class="gc-col"><span class="gc-bar" style="--h:50%"></span><span class="gc-x">3월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:68%"></span><span class="gc-x">4월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:80%"></span><span class="gc-x">5월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:58%"></span><span class="gc-x">6월</span></div>
+          <div class="gc-col hi"><span class="gc-bar" style="--h:100%"></span><span class="gc-x">7월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:60%"></span><span class="gc-x">8월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:64%"></span><span class="gc-x">9월</span></div>
+          <div class="gc-col"><span class="gc-bar" style="--h:48%"></span><span class="gc-x">10월</span></div>
+        </div>
+      </div>
+      <div class="gc-note">설치는 <b>7월 864건</b>으로 정점 · CPI는 <b>5월 19,070원 → 10월 6,962원 (−63%)</b> · 구글 GDN이 7월 설치를 가장 크게 견인. <span style="color:var(--mute)">*10월 1–23일 부분 집계</span></div>
+      <div class="gc-chan"><span class="c">네이버 브랜드검색</span><span class="c">메타 피드·스토리</span><span class="c">구글 GDN</span><span class="c">소재 직접 디자인</span></div>
     </div>
   </div>
 </section>
@@ -158,6 +242,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span>PROJECT 02 · 고챠</span>
 </div></footer>
 
-<script src="assets/site.js?v=5"></script>
+<script src="assets/site.js?v=6"></script>
 </body>
 </html>
