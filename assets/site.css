@@ -604,3 +604,43 @@ footer{border-top:1px solid var(--line); padding:28px 0 48px}
 
 /* dark-panel rhythm for .sec (alternating bg) */
 .sec.panel{background:radial-gradient(125% 80% at 50% -10%, #141414 0%, var(--bg) 68%)}
+
+/* ===== PER-PROJECT THEMES ===== */
+/* 위페어 — dark canvas, electric-blue accent */
+body.t-wepair{ --yel:#4d7fff; --yel-ink:#06122e }
+
+/* LIGHT canvas (고챠·센시콘) — flips shared tokens to white */
+body.light{
+  --bg:#ffffff; --bg-cover:#fafafb; --surface:#f6f7f9; --surface-2:#eceef2;
+  --white:#15171c; --gray:#565a62; --mute:#8a8f98; --dim:#c4c8cf;
+  --line:rgba(20,22,28,.13); --line-soft:rgba(20,22,28,.06);
+}
+body.t-gocha{ --yel:#4b46f0; --yel-ink:#ffffff }       /* indigo */
+body.t-sensicon{ --yel:#d9802a; --yel-ink:#ffffff }    /* warm amber */
+
+/* keep GNB + footer dark on light pages (designer signature thread) */
+body.light header.nav{ background:rgba(12,12,14,.93); border-bottom-color:rgba(255,255,255,.1) }
+body.light .brand .nm, body.light .navlink.on, body.light .navlink:hover, body.light .gnb a.contact{ color:#FAFAF8 }
+body.light .navlink{ color:#9b9ea6 }
+body.light .brand .rl{ color:#7c7c77 }
+body.light footer{ background:#0c0c0e; border-top-color:rgba(255,255,255,.1) }
+body.light footer .foot{ color:#8a8a86 }
+
+/* light-mode panels (instead of dark gradient) */
+body.light .sec.panel{ background:#f6f7f9 }
+body.light .feature.panel{ background:radial-gradient(125% 80% at 50% -10%, #f3f4f8 0%, #fff 70%) }
+
+/* airier rhythm + bigger mockups for light landing pages */
+body.light .sec{ padding:clamp(80px,10vw,168px) 0 }
+body.light .feature{ padding:clamp(76px,10vw,160px) 0 }
+body.light .feat-media .pmock{ width:min(100%,338px) }
+body.light .feat-desc{ font-size:1.06rem }
+
+/* standalone pmock (outside .feat-media) — e.g. hero mock band */
+.pmock{ display:block; height:auto; max-width:100% }
+.heromock{ display:grid; place-items:center; padding:0 0 clamp(8px,2vw,24px) }
+.heromock .pmock{ width:min(70%,288px) }
+body.light .pmock{ filter:drop-shadow(0 44px 64px rgba(28,32,58,.20)) drop-shadow(0 14px 26px rgba(28,32,58,.12)) }
+.hero-tag{ font-weight:600; font-size:clamp(1.12rem,2vw,1.6rem); line-height:1.45; letter-spacing:-.01em; margin-top:clamp(28px,4vw,44px); max-width:30ch }
+.hero-tag .yel{ color:var(--yel) }
+.hero-en{ font-family:var(--mono); font-size:clamp(.8rem,1.2vw,.92rem); color:var(--mute); line-height:1.65; margin-top:16px; max-width:56ch; letter-spacing:.2px }
