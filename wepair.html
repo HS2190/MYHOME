@@ -176,9 +176,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>03</b> / 시스템</span><span class="sec-meta"><span>DESIGN SYSTEM · AI WORKFLOW</span></span></div>
     <div class="sec-rule draw"></div>
     <h2 class="title reveal">화면 뒤의<br><mark>시스템.</mark></h2>
-    <div class="figs">
-      <figure class="reveal"><div class="fig"><img src="assets/pages/wepair-system.png" alt="디자인 시스템 0→1" loading="lazy"></div>
-        <figcaption class="figcap"><b>DESIGN SYSTEM</b> Primitive·Semantic·Component 3-레이어 토큰 — 혼자서도 운영 가능한 최소 구조</figcaption></figure>
+
+    <p class="feat-desc reveal" style="max-width:54ch">Primitive · Semantic · Component 3-레이어 토큰으로, 혼자서도 운영 가능한 최소 구조를 설계했다. <b class="yel" style="font-weight:600">Semantic 토큰만 바꾸면</b> 다크모드와 브랜드가 확장된다 — 아래에서 직접 눌러보세요.</p>
+
+    <div class="livesys reveal" data-theme="light" data-brand="blue">
+      <div class="ls-bar">
+        <span class="lbl">LIVE · 디자인 시스템</span>
+        <div class="ls-seg" data-toggle="theme">
+          <button data-v="light" class="on">Light</button><button data-v="dark">Dark</button>
+        </div>
+        <span class="lbl">BRAND</span>
+        <div class="ls-sws" data-toggle="brand">
+          <span class="ls-sw on" data-v="blue" style="background:#3b6ef6" title="Blue"></span>
+          <span class="ls-sw" data-v="orange" style="background:#ea580c" title="Orange"></span>
+          <span class="ls-sw" data-v="violet" style="background:#7c5cfc" title="Violet"></span>
+        </div>
+      </div>
+      <div class="ls-canvas">
+        <div class="ls-group"><div class="ls-gl">SEMANTIC TOKENS</div>
+          <div class="ls-row">
+            <span class="ls-token"><i style="background:var(--ds-primary)"></i>color.primary</span>
+            <span class="ls-token"><i style="background:var(--ds-bg)"></i>color.bg</span>
+            <span class="ls-token"><i style="background:var(--ds-surface)"></i>color.surface</span>
+            <span class="ls-token"><i style="background:var(--ds-primary-soft)"></i>color.primary.soft</span>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">BUTTON · 3</div>
+          <div class="ls-row">
+            <button class="dsb primary">한번에 예약</button>
+            <button class="dsb secondary">자세히 보기</button>
+            <button class="dsb ghost">취소</button>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">STATUS BADGE · 3</div>
+          <div class="ls-row">
+            <span class="dsbadge danger"><span class="dot"></span>교체 필요</span>
+            <span class="dsbadge warn"><span class="dot"></span>점검 권장</span>
+            <span class="dsbadge ok"><span class="dot"></span>정상</span>
+          </div>
+        </div>
+        <div class="ls-group"><div class="ls-gl">CARD · TOAST</div>
+          <div class="ls-row">
+            <div class="dscard">
+              <div class="plate">123가 1234</div>
+              <div class="model">BMW 5 · 입고 04-01</div>
+              <div class="crow"><span class="dsbadge warn"><span class="dot"></span>점검 권장</span><span class="dsbadge ok"><span class="dot"></span>결제완료</span></div>
+            </div>
+            <div class="dstoast"><span class="ic">✓</span>작업 사진이 저장되었습니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="ls-hint reveal">→ 같은 컴포넌트, <b>토큰만 교체</b>. PDF는 이걸 캡처할 수 있을 뿐, 만져볼 수는 없다.</p>
+
+    <div class="figs" style="margin-top:46px">
       <figure class="reveal"><div class="fig"><img src="assets/pages/wepair-ai.png" alt="Role-based AI Workflow" loading="lazy"></div>
         <figcaption class="figcap"><b>AI WORKFLOW</b> 오케스트레이터 + PM·PO·UX라이터 AI 에이전트 — 빈 역할을 워크플로우로 보완, 검수·확정은 사람</figcaption></figure>
     </div>

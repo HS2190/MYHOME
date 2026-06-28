@@ -48,3 +48,17 @@
     bar.style.width=(h>0?window.scrollY/h*100:0)+'%';};
     window.addEventListener('scroll', onScroll, {passive:true}); onScroll(); }
 })();
+
+// ===== live design system toggles =====
+document.querySelectorAll('.livesys').forEach(function(sys){
+  sys.querySelectorAll('[data-toggle]').forEach(function(group){
+    var attr = group.getAttribute('data-toggle');
+    group.querySelectorAll('[data-v]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        sys.setAttribute('data-'+attr, btn.getAttribute('data-v'));
+        group.querySelectorAll('[data-v]').forEach(function(x){ x.classList.remove('on'); });
+        btn.classList.add('on');
+      });
+    });
+  });
+});
