@@ -725,8 +725,12 @@ body.light .sec-meta, body.light .sec-rule{ display:none }
 body.light .sec{ text-align:center }
 body.light .feat-desc{ margin-left:auto; margin-right:auto }
 body.light .feat-chips{ justify-content:center }
-body.light .gia, body.light .livesys, body.light .gchart, body.light .evid,
-body.light .figs, body.light .retro, body.light .dnav, body.light .feature .fwrap{ text-align:left }
+/* center the native components too; keep only real-UI card internals left */
+body.light .dscard, body.light .dstype{ text-align:left }
+body.light .gia-chips, body.light .feat-chips, body.light .ls-row, body.light .gc-leg,
+body.light .gia-ch, body.light .gc-head{ justify-content:center }
+body.light .gia-ch, body.light .gc-head{ gap:14px 18px; flex-wrap:wrap }
+body.light .figcap{ justify-content:center }
 
 /* METRICS → soft rounded cards, centered */
 body.light .impact{ border-bottom:0 }
@@ -753,7 +757,7 @@ body.light .retro{ border:0; gap:14px; grid-template-columns:repeat(3,1fr) }
 body.light .retro .r{ border:0; background:var(--surface); border-radius:20px }
 body.light .retro .r.next{ border-left:0; background:var(--yel-soft) }
 body.light .dnav{ border:0; gap:14px; margin-top:18px }
-body.light .dnav a{ background:var(--surface); border-radius:20px; padding:clamp(26px,3vw,40px) clamp(24px,3vw,36px) }
-body.light .dnav a.next{ border-left:0; text-align:left }
+body.light .dnav a{ background:var(--surface); border-radius:20px; padding:clamp(26px,3vw,40px) clamp(24px,3vw,36px); text-align:center }
+body.light .dnav a.next{ border-left:0 }
 body.light .dnav a:hover{ background:var(--surface-2) }
 @media(max-width:760px){ body.light .evid, body.light .retro{ grid-template-columns:1fr } }
