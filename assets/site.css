@@ -761,3 +761,18 @@ body.light .dnav a{ background:var(--surface); border-radius:20px; padding:clamp
 body.light .dnav a.next{ border-left:0 }
 body.light .dnav a:hover{ background:var(--surface-2) }
 @media(max-width:760px){ body.light .evid, body.light .retro{ grid-template-columns:1fr } }
+
+/* design-system BOARD — fills the box width (full-bleed swatches + 2-col) */
+.ls-board{ text-align:left }
+.ls-board .lb-foundation{ padding-bottom:clamp(22px,3vw,32px); margin-bottom:clamp(22px,3vw,32px); border-bottom:1px solid var(--ds-border) }
+.lb-sw-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:14px }
+.lb-sw{ border:1px solid var(--ds-border); border-radius:12px; overflow:hidden; background:var(--ds-elev) }
+.lb-sw .c{ display:block; height:clamp(56px,7vw,88px) }
+.lb-sw .m{ display:flex; flex-direction:column; gap:3px; padding:11px 13px }
+.lb-sw .n{ font-weight:700; font-size:13px; color:var(--ds-text) }
+.lb-sw .h{ font-family:var(--mono); font-size:10px; color:var(--ds-muted) }
+.lb-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,3.4vw,48px) }
+body.light .ls-board .ls-row{ justify-content:flex-start; margin-top:14px }
+.lb-cardrow{ display:flex; flex-wrap:wrap; gap:16px; margin-top:14px }
+.lb-cardrow .dscard, .lb-cardrow .dstype{ flex:1 1 210px; min-width:0; width:auto }
+@media(max-width:680px){ .lb-sw-row{ grid-template-columns:repeat(2,1fr) } .lb-grid{ grid-template-columns:1fr; gap:30px } }
