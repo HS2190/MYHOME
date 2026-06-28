@@ -776,3 +776,21 @@ body.light .ls-board .ls-row{ justify-content:flex-start; margin-top:14px }
 .lb-cardrow{ display:flex; flex-wrap:wrap; gap:16px; margin-top:14px }
 .lb-cardrow .dscard, .lb-cardrow .dstype{ flex:1 1 210px; min-width:0; width:auto }
 @media(max-width:680px){ .lb-sw-row{ grid-template-columns:repeat(2,1fr) } .lb-grid{ grid-template-columns:1fr; gap:30px } }
+
+/* ===== SENSICON — kiosk (landscape) screen layouts ===== */
+.heroshot{ margin-top:clamp(34px,4.5vw,60px); border-radius:22px; overflow:hidden; border:1px solid var(--line); background:var(--surface) }
+.heroshot img{ width:100%; height:auto; display:block }
+.duo-dev{ display:grid; grid-template-columns:1.5fr .8fr; gap:clamp(16px,2.4vw,32px); align-items:center; margin-top:clamp(32px,4vw,52px) }
+@media(max-width:760px){ .duo-dev{ grid-template-columns:1fr; max-width:480px; margin-left:auto; margin-right:auto } }
+.scshot{ border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--surface) }
+.scshot img{ width:100%; height:auto; display:block }
+.scshot .sc-cap{ font-family:var(--mono); font-size:11px; letter-spacing:.4px; color:var(--mute); text-align:center; padding:12px }
+.flowgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2.2vw,28px); margin-top:clamp(32px,4vw,52px) }
+@media(max-width:880px){ .flowgrid{ grid-template-columns:repeat(2,1fr) } }
+@media(max-width:560px){ .flowgrid{ grid-template-columns:1fr } }
+.flowstep .fs-shot{ border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface) }
+.flowstep .fs-shot img{ width:100%; height:auto; display:block }
+.flowstep .fs-cap{ display:flex; align-items:center; justify-content:center; gap:10px; margin-top:14px }
+.flowstep .fs-n{ font-family:var(--mono); font-weight:600; font-size:11px; color:var(--yel-ink); background:var(--yel);
+  border-radius:999px; min-width:24px; height:24px; padding:0 7px; display:inline-grid; place-items:center }
+.flowstep .fs-t{ font-weight:600; font-size:.94rem; color:var(--white) }
