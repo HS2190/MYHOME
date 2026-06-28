@@ -822,6 +822,10 @@ body.t-wepair .compare, body.t-wepair .tradeoff{ text-align:left }
    ===================================================================== */
 body.t-home{ --yel:#15A06B; --yel-ink:#ffffff; --yel-soft:#E3F2EA }
 
+/* hero tag on one line (desktop); graceful wrap on narrow screens */
+body.t-home .hero-tag{ max-width:none; white-space:nowrap; word-break:keep-all }
+@media(max-width:560px){ body.t-home .hero-tag{ white-space:normal } }
+
 /* hero journey → centered soft pills */
 body.t-home .home-journey{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(30px,4vw,46px) }
 body.t-home .home-journey .j{ font-family:var(--mono); font-size:12px; letter-spacing:.2px; color:var(--gray);
