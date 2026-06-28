@@ -25,7 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -68,17 +68,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- OVERVIEW -->
-<section class="sec">
+<!-- ===== 문제 (question hook) ===== -->
+<section class="qhero">
   <div class="wrap">
-    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>01</b> / 개요</span><span class="sec-meta"><span>DECISION MATRIX</span></span></div>
+    <div class="ql"><span class="sq"></span><b>문제</b> · 공업사의 하루는 수리가 아니라 행정에서 샌다</div>
+    <h2 class="q reveal">사진 한 장이 빠지면,<br><span class="yel">보험금이 깎인다.</span></h2>
+    <p class="qsub reveal">사고수리는 공정별 증빙 사진이 곧 매출이다. 그런데 현장은 장갑 낀 손, 끊기는 네트워크, 수백 장의 카톡 사진 — <b>증빙이 새기 딱 좋은 환경</b>이었다. 위페어 파트너스는 500개 이상의 공업사가 쓰는, 그 누수를 막는 운영 앱이다.</p>
+    <p class="qen reveal">In collision repair, the photos are the invoice. One missing shot means a slashed — or rejected — insurance claim. Wepair Partners is the field app that stops the leak, for 500+ auto shops.</p>
+  </div>
+</section>
+
+<!-- ===== 증거 (pain cards) ===== -->
+<section class="sec" style="padding-top:clamp(56px,7vw,100px)">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span>현장에서, 무슨 일이 일어나고 있었나</span><span class="sec-meta"><span>3 PAIN POINTS · FIELD</span></span></div>
     <div class="sec-rule draw"></div>
-    <h2 class="title reveal">컴포넌트로 기준을 세우고,<br>빈 역할은 <mark>AI로</mark> 메웠다.</h2>
-    <div class="dmatrix">
-      <div class="dmrow reveal"><span class="mk">→ PROBLEM</span><span class="mv">MVP 직후 합류. React 기본값 화면이 그대로 운영되고 PM·기획·UX라이터도 없었다. VOC 12건이 가리킨 건 정보 위계와 기준의 부재였다.</span></div>
-      <div class="dmrow reveal"><span class="mk">→ MY ROLE</span><span class="mv">1인 디자이너로 디자인 시스템 0→1 구축부터 VOC 화면 재설계, 역할 기반 AI 워크플로우 설계·운영까지 단독 책임.</span></div>
-      <div class="dmrow reveal"><span class="mk">→ DECISION</span><span class="mv">컴포넌트로 기준을 세웠다. 빈 역할은 <mark>AI 워크플로우</mark>로 메웠다.</span></div>
-      <div class="dmrow reveal"><span class="mk">→ OUTCOME</span><span class="mv">화면 설계 5h→2h, UI 문구 기준 0→1, PRD Workflow 0→1 구축.</span></div>
+    <div class="evid">
+      <div class="ec reveal">
+        <div class="ek">FINANCIAL RISK</div><div class="ekr">재무 리스크</div>
+        <div class="et">보험 청구 반려·삭감</div>
+        <p class="ep">공정별 증빙 사진이 곧 매출이다. 작업자가 내부 판금이나 부품 교체 사진을 놓치면, 보험금이 깎이거나 청구가 통째로 반려된다.</p>
+        <div class="eq">사진을 찾는 시간 없이, 즉시 청구 작업으로 넘어가고 싶다.</div>
+      </div>
+      <div class="ec reveal">
+        <div class="ek">ADMIN OVERHEAD</div><div class="ekr">행정 비효율</div>
+        <div class="et">사진 취합·폴더링 야근</div>
+        <p class="ep">카톡·개인 폰으로 흩어져 찍힌 수백 장을, 퇴근 전 차량번호별로 일일이 확인하고 폴더링한다. 매일 반복되는 1시간 이상의 야근.</p>
+        <div class="eq">사진 정리하느라 뺏긴 시간, 이제는 돈 버는 고민에만 쓰고 싶습니다.</div>
+      </div>
+      <div class="ec reveal">
+        <div class="ek">COMMUNICATION LOAD</div><div class="ekr">소통 부하</div>
+        <div class="et">실시간 진행 문의 응대</div>
+        <p class="ep">“내 차 언제 나와요?” 고객 문의 전화마다 대표는 하던 일을 멈추고 현장으로 간다. 확인하고 돌아오면, 또 다른 일이 끊겨 있다.</p>
+        <div class="eq">사무실에서도, 현장 상황이 한눈에 보였으면.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 현장 리서치 (env · principles · persona) ===== -->
+<section class="sec panel">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>01</b> / 현장 리서치</span><span class="sec-meta"><span>ENVIRONMENT · PERSONA</span></span></div>
+    <div class="sec-rule draw"></div>
+    <h2 class="title reveal">같은 앱을 쓰는,<br><mark>전혀 다른 두 사람.</mark></h2>
+    <p class="feat-desc reveal" style="max-width:56ch">화면을 그리기 전에 현장을 정의했다. 중형 사고수리 공장의 물리적 환경과 두 사용자의 맥락을 분석해, 모든 설계의 기준이 될 원칙부터 세웠다.</p>
+
+    <div class="envstat reveal">
+      <div class="es"><b>10~20대</b><span>상시 작업 차량</span></div>
+      <div class="es"><b>80%</b><span>외판·판금·도장 수리 비중</span></div>
+      <div class="es"><b>70~80%</b><span>보험 수리 — 사진 증빙 필수</span></div>
+      <div class="es"><b>25년</b><span>작업자 경력 · 디지털 숙련 낮음</span></div>
+    </div>
+
+    <div class="prinlist">
+      <div class="pri reveal"><span class="prn">01</span><span class="prt">환경이 다른 사용자는, 같은 기능이라도 <b>다른 UX 설계</b>가 필요하다</span></div>
+      <div class="pri reveal"><span class="prn">02</span><span class="prt">작업자 환경에서는 <b>생각하게 만들면 실패</b>다</span></div>
+      <div class="pri reveal"><span class="prn">03</span><span class="prt">관리자는 전체 흐름을 한눈에 보지 못하면 불안해한다</span></div>
+      <div class="pri reveal"><span class="prn">04</span><span class="prt">사진 촬영은 기록이 아니라 <b>보험 대응을 위한 증빙 행위</b>다</span></div>
+      <div class="pri reveal"><span class="prn">05</span><span class="prt">시스템이 사람 대신 <b>규칙을 강제</b>해야 한다</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="pcard admin reveal">
+        <div class="pcrole"><span class="sq"></span>관리자 · ADMIN</div>
+        <div class="pcname">박정훈 대표</div>
+        <div class="pcmeta">50세 · 공업사 대표 · 경기 화성<br>PC + 안드로이드 · 디지털 숙련도 중간</div>
+        <div class="pcquote">사진 정리하느라 뺏긴 시간, 이제는 돈 버는 고민에만 쓰고 싶습니다</div>
+        <div class="pcrow"><span class="pctag">통제·요약</span><span class="pctag">전체 흐름 파악</span><span class="pctag">CCTV 대용</span></div>
+        <div class="pcux"><span class="uk">UX 방향</span><b>대시보드 중심 · 상태 요약형</b> — 전체 차량 흐름을 한눈에, 누락·지연 차량을 즉시 식별</div>
+      </div>
+      <div class="pcard worker reveal">
+        <div class="pcrole"><span class="sq"></span>작업자 · WORKER</div>
+        <div class="pcname">최성호 부장</div>
+        <div class="pcmeta">55세 · 판금/도장 25년차 · 경기 화성<br>장갑 착용 · 한 손 조작 · 디지털 숙련도 낮음</div>
+        <div class="pcquote">사진만 잘 들어가고, 수리 업무에 집중하고 싶어요</div>
+        <div class="pcrow"><span class="pctag">큰 버튼</span><span class="pctag">한 손 촬영</span><span class="pctag">텍스트 최소화</span></div>
+        <div class="pcux"><span class="uk">UX 방향</span><b>카메라 중심 · 단계 강제형</b> — 생각하게 만들면 실패, 큰 버튼·최소 단계로 오작동을 막는다</div>
+      </div>
     </div>
   </div>
 </section>
@@ -113,6 +180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-eyebrow"><span class="sq"></span>DECISION 01 · 가설을 버리다</div>
       <h2 class="feat-title">번호판을 <span class="yel">메인으로.</span></h2>
       <p class="feat-desc">처음 가설은 ‘UI를 다듬으면 된다’였다. 현장 VOC 12건이 그 가설을 <b class="yel" style="font-weight:600">기각</b>했다 — 문제는 시각이 아니라 정보 위계였다. 번호판을 메인 정보로 승격하고 카드를 분리, 터치 영역을 표준화했다. <b class="yel" style="font-weight:600">핸들을 드래그해 전·후를 비교해보세요.</b></p>
+      <p class="feat-en">The first hypothesis was “just polish the UI.” 12 field interviews killed it — the problem was hierarchy, not pixels.</p>
       <p class="feat-voc">다 비슷해 보여서 중요한 게 뭔지 한눈에 안 들어와요.</p>
       <div class="feat-chips"><span class="c">번호판 메인 승격</span><span class="c">정보 카드 분리</span><span class="c">터치 영역 표준화</span></div>
     </div>
@@ -136,6 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-eyebrow"><span class="sq"></span>DECISION 02 · 깊이가 아니라 위치</div>
       <h2 class="feat-title">매출을 <span class="yel">한 화면에서.</span></h2>
       <p class="feat-desc">매일 보는 매출이 ‘우리공장’ 탭 2단계 안에 숨어 있었다. 흔한 처방은 ‘단계를 줄이자’지만, 진짜 문제는 깊이가 아니라 <b class="yel" style="font-weight:600">위치</b>였다 — 결제현황을 아예 메인 탭으로 끌어올리고 정산을 통합했다.</p>
+      <p class="feat-en">Daily revenue sat two taps deep. The fix wasn’t fewer steps — it was the right location.</p>
       <p class="feat-voc">결제내역이랑 정산현황을 한 화면에서 한 번에 보고 싶어요.</p>
       <div class="feat-chips"><span class="c">메인 탭 승격</span><span class="c">정산 통합</span><span class="c">진입 2→1단계</span></div>
     </div>
@@ -152,6 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-eyebrow"><span class="sq"></span>DECISION 03 · 현장의 손</div>
       <h2 class="feat-title">장갑 낀 손으로도,<br><span class="yel">한 번에.</span></h2>
       <p class="feat-desc">화면만 보면 사진 기능은 멀쩡했다. 문제는 <b class="yel" style="font-weight:600">사용 맥락</b>이었다 — 장갑 낀 한 손, 상단까지 닿지 않는 동선. 기능을 엄지존 하단으로 내리고 진입점을 통합, 다중 선택·일괄 공유를 더했다.</p>
+      <p class="feat-en">On screen, the camera worked fine. In context — one gloved hand, mid-repair — it didn’t.</p>
       <p class="feat-voc">사진 여러 장 골라서 보내는 게, 장갑 낀 손으론 너무 번거로워요.</p>
       <div class="feat-chips"><span class="c">엄지존 배치</span><span class="c">진입점 통합</span><span class="c">다중 선택·일괄 공유</span></div>
     </div>
@@ -169,6 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-eyebrow"><span class="sq"></span>TRADE-OFF · 무엇을 미룰까</div>
       <h2 class="feat-title">맞는 답이 아니라,<br><span class="yel">출시 가능한 답.</span></h2>
       <p class="feat-desc">이상적 해법은 계정 구조 분리였다. 작업자·관리자 계정을 나눠 로그인 기반으로 ‘누가’를 자동 식별 — 1차 시안까지 그렸다. 하지만 개발 공수가 컸다. <b class="yel" style="font-weight:600">계정 분리는 보류하고</b>, 작업자 이름 표시 + 공정 단계 그룹화로 핵심 가치부터 먼저 릴리즈했다. 1인 디자이너의 일은 ‘맞는 답’을 그리는 게 아니라, <b class="yel" style="font-weight:600">지금 출시 가능한 답을 고르는 판단</b>이었다.</p>
+      <p class="feat-en">The ideal answer was account separation. The shippable answer was a name label. A solo designer ships the second.</p>
       <p class="feat-voc">사진을 누가 찍었는지, 지금 누가 무슨 작업을 하는지 구분이 안 돼요.</p>
       <div class="feat-chips"><span class="c">계정 분리 보류</span><span class="c">작업자 이름 우선</span><span class="c">핵심 가치부터 릴리즈</span></div>
     </div>
@@ -178,10 +249,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ===== 03 의사결정 검증 (4-version eval) ===== -->
+<section class="sec panel">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>03</b> / 의사결정 검증</span><span class="sec-meta"><span>4 CANDIDATES · SCORED</span></span></div>
+    <div class="sec-rule draw"></div>
+    <h2 class="title reveal">직관이 아니라,<br><mark>데이터로 골랐다.</mark></h2>
+    <p class="feat-desc reveal" style="max-width:60ch">메인 작업목록 화면(위 DECISION 01)의 최종안은 감으로 정하지 않았다. 두 페르소나와 실기기 이슈 리포트를 기준으로 4개 버전을 만들고, 5개 항목으로 정량 평가했다 — 폰트 확대 대응 · 디바이스 호환성 · 차량 식별성 · 고령 접근성 · 밀도와 가독성의 균형.</p>
+
+    <div class="compare reveal">
+      <div class="cmp-row win">
+        <div class="cmv">SCR-MAIN-004 <small>카드 UI · 채택</small></div>
+        <div class="cmp-bar"><i style="--w:91%"></i></div>
+        <div class="cms">91</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmv">SCR-MAIN-003 <small>정보계층 양호</small></div>
+        <div class="cmp-bar"><i style="--w:74%"></i></div>
+        <div class="cms">74</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmv">SCR-MAIN-002 <small>확대 대응 부족</small></div>
+        <div class="cmp-bar"><i style="--w:63%"></i></div>
+        <div class="cms">63</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmv">SCR-MAIN-001 <small>리스트형 · 정보 부족</small></div>
+        <div class="cmp-bar"><i style="--w:32%"></i></div>
+        <div class="cms">32</div>
+      </div>
+    </div>
+
+    <div class="tradeoff reveal">
+      <div class="tk">THE TRADE-OFF</div>
+      <div class="tt">현장은 ‘리스트’를 원했다.<br>나는 <span class="yel">‘카드’</span>를 택했다.</div>
+      <p class="tp">단일 항목 ‘한 화면에 더 많은 차량을 보고 싶다’만 떼어 보면, 리스트형(001)이 <b>70점으로 오히려 1위</b>였다. 하지만 카드를 리스트로 바꾸는 순간 폰트 확대 대응·디바이스 호환성·고령 터치 타겟이 모두 후퇴한다. 그리고 잘못된 차량에 사진을 올리면 — 그건 곧 <b>보험 청구 오류이자 직접적 금전 손해</b>다.</p>
+      <div class="tgrid">
+        <div class="tg yes"><div class="tgh">택한 것 · 카드 UI</div><p>폰트를 키워도 카드 높이만 늘고 레이아웃은 유지된다. 1카드 = 1개의 큰 터치 영역으로 55세 작업자의 오작동을 줄인다. 안전성·접근성·이슈 대응을 우선했다.</p></div>
+        <div class="tg no"><div class="tgh">포기한 것 · 리스트 밀도</div><p>현장의 밀도 니즈는 유효하다 — 단, 카드 높이 최소화·필터·스크롤 최적화로 보완 가능한 범위. ‘카드 높이 최소화 A/B’는 다음 과제로 남겼다.</p></div>
+      </div>
+      <div class="tconc">→ <b>리스트 밀도보다 안전성·접근성·이슈 대응을 우선한 설계.</b> 정량 점수가 직관과 충돌할 때, 더 큰 리스크를 기준으로 판단했다.</div>
+    </div>
+  </div>
+</section>
+
 <!-- SYSTEM -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>03</b> / 시스템</span><span class="sec-meta"><span>DESIGN SYSTEM · AI WORKFLOW</span></span></div>
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>04</b> / 시스템</span><span class="sec-meta"><span>DESIGN SYSTEM · AI WORKFLOW</span></span></div>
     <div class="sec-rule draw"></div>
     <h2 class="title reveal">화면 뒤의<br><mark>시스템.</mark></h2>
 
@@ -243,7 +358,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ===== AI WORKFLOW (interactive console) ===== -->
 <section class="sec" id="aiflow">
   <div class="wrap">
-    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>04</b> / AI 워크플로우</span><span class="sec-meta"><span>ROLE-BASED · ORCHESTRATION</span></span></div>
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>05</b> / AI 워크플로우</span><span class="sec-meta"><span>ROLE-BASED · ORCHESTRATION</span></span></div>
     <div class="sec-rule draw"></div>
     <h2 class="title reveal">없던 역할을,<br><mark>워크플로우로.</mark></h2>
     <p class="feat-desc reveal" style="max-width:58ch">PM·PO·UX라이터가 없는 자리. 부족한 역할을 Claude Code 기반 워크플로우로 구조화하고, 검수·확정은 사람이 소유했다. PRD·UX 라이팅 기준을 0→1로.</p>
@@ -285,7 +400,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- RETROSPECT -->
 <section class="sec">
   <div class="wrap">
-    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>05</b> / 회고</span><span class="sec-meta"><span>RETROSPECT</span></span></div>
+    <div class="sec-top reveal"><span class="sec-id"><span class="sq"></span><b>06</b> / 회고</span><span class="sec-meta"><span>RETROSPECT</span></span></div>
     <div class="sec-rule draw"></div>
     <div class="retro">
       <div class="r reveal"><div class="rk">LIMITATION · 정직</div><div class="rt">성과를 숫자로 증명하진 못했다</div><div class="rp">약 7개월. 정성 변화(설계 속도·일관성·병목 역전)는 분명했지만, 리텐션 같은 하드 지표로 인과를 증명하기엔 짧은 기간이었다. 이건 솔직히 남은 숙제다.</div></div>
@@ -306,6 +421,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <span>PROJECT 01 · 위페어 파트너스</span>
 </div></footer>
 
-<script src="assets/site.js?v=3"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>
