@@ -794,3 +794,23 @@ body.light .ls-board .ls-row{ justify-content:flex-start; margin-top:14px }
 .flowstep .fs-n{ font-family:var(--mono); font-weight:600; font-size:11px; color:var(--yel-ink); background:var(--yel);
   border-radius:999px; min-width:24px; height:24px; padding:0 7px; display:inline-grid; place-items:center }
 .flowstep .fs-t{ font-weight:600; font-size:.94rem; color:var(--white) }
+
+/* ===== WEPAIR → light JOMO (consistency with 고챠/센시콘) ===== */
+body.t-wepair{ --yel-soft:#e7eeff }
+/* center qhero + big .title headlines on light pages */
+body.light .qhero{ text-align:center }
+body.light .qhero .ql{ justify-content:center }
+body.light .qhero h2.q, body.light .qhero .qsub, body.light .qhero .qen{ margin-left:auto; margin-right:auto }
+body.light .title{ margin-left:auto; margin-right:auto }
+/* centered features: drop the left quote-bar on VOC lines */
+body.light .feat-voc{ border-left:0; padding-left:0; padding-right:0 }
+/* AI orchestrator console → light cards + blue accent */
+body.light .aiflow{ background:var(--surface) }
+body.light .ai-node.lit{ background:var(--yel-soft); box-shadow:0 0 0 1px var(--yel), 0 10px 30px rgba(77,127,255,.18) }
+body.light .ai-node.orc.lit{ box-shadow:0 0 0 1px var(--yel), 0 0 42px rgba(77,127,255,.20) }
+/* accent tints (replace hardcoded yellow) */
+.pcard.worker{ border-color:var(--yel) }
+.tradeoff .tg.yes{ border-color:var(--yel); background:var(--yel-soft) }
+/* dense analytical components stay left-aligned (readability) */
+body.t-wepair .evid, body.t-wepair .prinlist, body.t-wepair .persona,
+body.t-wepair .compare, body.t-wepair .tradeoff{ text-align:left }
