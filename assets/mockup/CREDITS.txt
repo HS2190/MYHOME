@@ -1,0 +1,4 @@
+Device frame: PommePlate (https://github.com/ephread/PommePlate)
+License: CC0 1.0 Universal (Public Domain) — no attribution required.
+iphone-frame.png = "iPhone X-XS-11 Pro Space Gray". mock-*.png = our app
+screenshots composited into that CC0 frame.
