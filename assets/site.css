@@ -914,3 +914,27 @@ body.t-home .cta .arrow{ color:var(--yel) }
   width:26%; height:clamp(10px,1.5vw,14px); background:#0b0b0d; border-radius:20px; z-index:3 }
 .cmp2 .ccap{ font-size:.84rem; color:var(--gray); margin-top:15px; line-height:1.45; max-width:20ch; word-break:keep-all }
 @media(max-width:520px){ .cmp2{ gap:11px } .cmp2 .ccap{ font-size:.78rem } }
+
+/* =====================================================================
+   PROJECT 04 — AI WORKFLOW case (t-aicrew, violet accent)
+   ===================================================================== */
+body.t-aicrew{ --yel:#7C3AED; --yel-ink:#ffffff; --yel-soft:#EEE7FC }
+
+/* outcome stat cards reuse .impact/.istat (soft under body.light) */
+body.t-aicrew .bignum{ font-size:clamp(2rem,4vw,3.2rem) }
+
+/* projects.html — AI crew card mini orchestrator viz (no phone mockup) */
+.aiviz{ width:100%; aspect-ratio:4/5; border-radius:24px; background:var(--surface); border:1px solid var(--line);
+  display:grid; place-items:center; padding:clamp(22px,4%,40px); overflow:hidden }
+.aiviz .vwrap{ display:flex; flex-direction:column; align-items:center; gap:12px; width:100%; max-width:300px }
+.aiviz .vn{ width:100%; border:1px solid var(--line); border-radius:12px; background:var(--bg-2,#fff); padding:13px 16px; text-align:center }
+.aiviz .vn .k{ font-family:var(--mono); font-size:10px; letter-spacing:.5px; color:var(--mute) }
+.aiviz .vn .t{ font-weight:700; font-size:.92rem; margin-top:4px; color:var(--white) }
+.aiviz .vn.orc{ background:var(--yel-soft); border-color:var(--yel) } .aiviz .vn.orc .k{ color:var(--yel) }
+.aiviz .vrow{ display:flex; gap:8px; width:100% }
+.aiviz .vrow .vn{ flex:1; padding:10px 8px } .aiviz .vrow .vn .t{ font-size:.74rem }
+.aiviz .varr{ font-family:var(--mono); color:var(--yel); font-size:15px }
+.aiviz .vn.human{ border-color:var(--yel); border-width:1.5px }
+/* 4-up beats grid works on any light case page */
+body.light .evid.b4{ grid-template-columns:1fr 1fr }
+@media(max-width:760px){ body.light .evid.b4{ grid-template-columns:1fr } }
