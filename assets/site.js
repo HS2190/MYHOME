@@ -62,3 +62,17 @@ document.querySelectorAll('.livesys').forEach(function(sys){
     });
   });
 });
+
+// ===== before/after sliders =====
+document.querySelectorAll('.ba').forEach(function(ba){
+  function setX(clientX){
+    var r=ba.getBoundingClientRect();
+    var p=(clientX-r.left)/r.width*100; p=Math.max(4,Math.min(96,p));
+    ba.style.setProperty('--split', p+'%');
+  }
+  var on=false;
+  ba.addEventListener('pointerdown',function(e){on=true; try{ba.setPointerCapture(e.pointerId);}catch(_){} setX(e.clientX);});
+  ba.addEventListener('pointermove',function(e){ if(on) setX(e.clientX); });
+  ba.addEventListener('pointerup',function(){on=false;});
+  ba.addEventListener('pointercancel',function(){on=false;});
+});
